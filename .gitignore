@@ -1,0 +1,9 @@
+# Ignore the backup directory if one is created
+dotfiles_backup/
+
+# Other ignores
+*.sublime-workspace
+.vscode
+
+# Ignore synology junk
+*@eaDir*

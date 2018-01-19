@@ -1,0 +1,17 @@
+homebrewCasks:
+  - appcleaner
+  - dash
+  - dropbox
+  - filezilla
+  - firefox
+  - iterm2
+  - launchrocket
+  - numi
+  - sequel-pro
+  - sourcetree
+  - visual-studio-code
+
+vscode:
+  # list of visual studio code plugins to install  
+  - eamodio.gitlens
+  - zhuangtongfa.Material-theme
