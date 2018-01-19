@@ -1,7 +1,6 @@
 symlinks:
   # format is - destination: source (source files are relative to 'install.sh')
   # Home Directory sync files
-  - ~/.bash_profile:                                 config/sync/bash_profile
   - ~/.gitconfig:                                    config/sync/gitconfig
   - ~/.hushlogin:                                   config/sync/hushlogin
   - ~/.zshrc:                                       config/sync/zshrc
