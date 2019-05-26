@@ -6,7 +6,6 @@ symlinks:
   - ~/.hushlogin:                                   config/sync/hushlogin
   - ~/.zshrc:                                       config/sync/zshrc
   - ~/.zpreztorc:                                   config/sync/zpreztorc
-  - ~/.sed:                                         config/sync/sed
 
   # Complex sync files
   - ~/Library/Application Support/Code/User/keybindings.json:         config/sync/vscodeUserPref/keybindings.json
