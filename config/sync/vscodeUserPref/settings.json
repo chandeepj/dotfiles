@@ -19,6 +19,7 @@
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
         "suppressResultsExplorerNotice": true,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
@@ -28,4 +29,29 @@
     "gitlens.codeLens.enabled": false,
     "editor.wordWrap": "on",
     "git.autofetch": true,
+    "gitlens.keymap": "chorded",
+    "php.suggest.basic": false,
+    "window.zoomLevel": 0,
+    "git.confirmSync": false,
+    "breadcrumbs.enabled": false,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "liveSassCompile.settings.formats":[
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        },
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "scss.lint.duplicateProperties": "warning",
+    "scss.lint.float": "warning",
+    "terminal.integrated.shell.osx": "zsh",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.5,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
 }

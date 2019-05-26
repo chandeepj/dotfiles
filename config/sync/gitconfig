@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Chandeep
-	email = chandeep@dezinewoods.com
+	name = chandeepj
+	email = chandeepsj@gmail.com
 [core]
 	excludesfile = /Users/developer/.gitignore_global
 [difftool "sourcetree"]

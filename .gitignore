@@ -4,6 +4,7 @@ dotfiles_backup/
 # Other ignores
 *.sublime-workspace
 .vscode
+.DS_Store
 
 # Ignore synology junk
 *@eaDir*
