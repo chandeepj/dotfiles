@@ -69,8 +69,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 eval $(thefuck --alias)
 
-alias new-wp='source /Users/chandeep/Dropbox/shell-scripts/wp-local-install.sh'
-
 export PATH="/usr/local/sbin:$PATH"
 # Add Visual Studio Code (code)
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/chandeep/.composer/vendor/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/chandeep/.composer/vendor/bin:/Users/chandeep/bin"

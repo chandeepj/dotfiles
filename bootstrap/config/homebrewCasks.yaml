@@ -1,14 +1,11 @@
 homebrewCasks:
   - appcleaner
-  - dash
   - dropbox
   - filezilla
   - firefox
   - iterm2
-  - launchrocket
   - numi
   - sequel-pro
-  - sourcetree
   - visual-studio-code
 
 vscode:
