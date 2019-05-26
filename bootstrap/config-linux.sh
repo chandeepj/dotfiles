@@ -14,7 +14,7 @@ _mainScript_() {
   # Set Variables
   baseDir="$(_findBaseDir_)"
   rootDIR="$(dirname "$baseDir")"
-  privateInstallScript="${HOME}/dotfiles-private/privateInstall.sh"
+  # privateInstallScript="${HOME}/dotfiles-private/privateInstall.sh"
   pluginScripts="${baseDir}/plugins"
 
   # Config files
@@ -35,17 +35,17 @@ _mainScript_() {
     _doSymlinks_ "${configSymlinks}"
   fi
 
-  _privateRepo_() {
-    if _seekConfirmation_ "Run Private install script"; then
-      [ ! -f "${privateInstallScript}" ] \
-        && {
-          warning "Could not find private install script"
-          return 1
-        }
-      "${privateInstallScript}" "${scriptFlags[*]}"
-    fi
-  }
-  _privateRepo_
+  # _privateRepo_() {
+  #   if _seekConfirmation_ "Run Private install script"; then
+  #     [ ! -f "${privateInstallScript}" ] \
+  #       && {
+  #         warning "Could not find private install script"
+  #         return 1
+  #       }
+  #     "${privateInstallScript}" "${scriptFlags[*]}"
+  #   fi
+  # }
+  # _privateRepo_
 
   _generateKey_() {
     if [ ! -f "${HOME}/.ssh/id_rsa.pub" ]; then
