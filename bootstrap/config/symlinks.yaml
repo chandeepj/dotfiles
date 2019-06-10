@@ -13,4 +13,5 @@ symlinks:
 
   # Bin Scripts
   - ~/bin/trash:                                    bin/trash
-  - ~/bin/new-wp:                                   bin/wp-local-install
+  - ~/bin/wp-add:                                   bin/wp-add
+  - ~/bin/wp-remove:                                bin/wp-remove

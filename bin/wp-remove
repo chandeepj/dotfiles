@@ -1,0 +1,42 @@
+#!/usr/bin/env zsh
+
+# 
+# Script to remove locally installed WP site
+# Uses wp-cli to remove database then deletes the wp root folder
+# 
+
+cd ~/lab/
+
+DIR="$1"
+
+if [ -z $DIR ]
+then
+    echo "
+You need to specify the site you want to delete!!!
+    
+Try:- 
+
+    wp-remove SITENAME
+
+Replace SITENAME with the dir slug of the site you want to remove"
+
+    exit
+fi
+
+if [ -d $DIR ] 
+then
+
+    cd $DIR
+
+    echo "Dropping database '$1'..." 
+    wp db drop --yes
+
+    cd ~/lab/
+
+    echo "Removing site '$1'..."
+    rm -rf $DIR
+
+    echo "Site named '$1' has been removed successfully" 
+else
+    echo "Site named '$1' Doesn't exists" 
+fi
