@@ -33,7 +33,7 @@
     "php.suggest.basic": false,
     "window.zoomLevel": 0,
     "git.confirmSync": false,
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
     "liveSassCompile.settings.formats":[
@@ -44,7 +44,7 @@
         },
     ],
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "scss.lint.duplicateProperties": "warning",
     "scss.lint.float": "warning",
