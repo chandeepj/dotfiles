@@ -72,3 +72,6 @@ eval $(thefuck --alias)
 export PATH="/usr/local/sbin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/chandeep/.composer/vendor/bin:/Users/chandeep/bin"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

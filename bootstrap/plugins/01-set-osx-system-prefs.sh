@@ -25,11 +25,7 @@ _mainScript_() {
 
     # General UI Tweaks
     # ---------------------------
-    _execute_ "sudo nvram SystemAudioVolume=' '" "Disable Sound Effects on Boot"
-
-    _execute_ "defaults write NSGlobalDomain NSWindowResizeTime .001" "Get snappier save sheets"
-
-    _execute_ "defaults write NSGlobalDomain AppleHighlightColor -string '0.984300 0.929400 0.450900'" "Set highlight color to yellow"
+    _execute_ "sudo nvram SystemAudioVolume=%80' '" "Disable Sound Effects on Boot"
 
     _execute_ "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2" "Set sidebar icon size to medium"
     # Possible values for int: 1=small, 2=medium
@@ -59,8 +55,6 @@ _mainScript_() {
     _execute_ "defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true" "Disable automatic termination of inactive apps"
 
     _execute_ "defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false" "Disable Resume system-wide"
-
-    _execute_ "defaults write com.apple.helpviewer DevMode -bool true"
 
     _execute_ "sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName" "Reveal info when clicking the clock in the login window"
 
@@ -103,16 +97,6 @@ _mainScript_() {
     _execute_ "defaults write com.apple.BluetoothAudioAgent 'Apple Bitpool Min (editable)' -int 40" "Increase sound quality for Bluetooth headphones/headsets"
 
     _execute_ "defaults write NSGlobalDomain AppleKeyboardUIMode -int 3" "Enable full keyboard access for all controls"
-
-    _execute_ "defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true" "Use scroll gesture with the Ctrl (^) modifier key to zoom"
-    _execute_ "defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144" "Use scroll gesture with the Ctrl (^) modifier key to zoom"
-    _execute_ "defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true" "Follow the keyboard focus while zoomed in"
-
-    #_execute_ "defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false" "Disable press-and-hold for keys in favor of key repeat"
-
-    # _execute_ "defaults write NSGlobalDomain KeyRepeat -int 1" "Set a blazingly fast keyboard repeat rate"
-
-    # _execute_ "defaults write NSGlobalDomain InitialKeyRepeat -int 12" "Set a shorter Delay until key repeat"
 
     _execute_ "defaults write com.apple.BezelServices kDim -bool true" "Automatically illuminate built-in MacBook keyboard in low light"
 
@@ -416,54 +400,6 @@ _mainScript_() {
 
     #success "Disable inline attachments (just show the icons)"
     #defaults write com.apple.mail DisableInlineAttachmentViewing -bool false
-
-    # Spotlight Preferences
-    # ---------------------------
-
-    # Hide Spotlight tray-icon (and subsequent helper)
-    #sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-
-    success "Disabled Spotlight indexing for any new mounted volume"
-    # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-    sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-
-    # success "Change indexing order and disable some file types"
-    # Newer-specific search results (remove them if your are using OS X 10.9 or older):
-    #   MENU_DEFINITION
-    #   MENU_CONVERSION
-    #   MENU_EXPRESSION
-    #   MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
-    #   MENU_WEBSEARCH             (send search queries to Apple)
-    #   MENU_OTHER
-    # defaults write com.apple.spotlight orderedItems -array \
-    #   '{"enabled" = 1;"name" = "APPLICATIONS";}' \
-    #   '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-    #   '{"enabled" = 1;"name" = "DIRECTORIES";}' \
-    #   '{"enabled" = 1;"name" = "PDF";}' \
-    #   '{"enabled" = 1;"name" = "FONTS";}' \
-    #   '{"enabled" = 0;"name" = "DOCUMENTS";}' \
-    #   '{"enabled" = 0;"name" = "MESSAGES";}' \
-    #   '{"enabled" = 0;"name" = "CONTACT";}' \
-    #  '{"enabled" = 0;"name" = "EVENT_TODO";}' \
-    #   '{"enabled" = 0;"name" = "IMAGES";}' \
-    #   '{"enabled" = 0;"name" = "BOOKMARKS";}' \
-    #   '{"enabled" = 0;"name" = "MUSIC";}' \
-    #   '{"enabled" = 0;"name" = "MOVIES";}' \
-    #   '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-    #   '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
-    #   '{"enabled" = 0;"name" = "SOURCE";}' \
-    #   '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
-    #   '{"enabled" = 0;"name" = "MENU_OTHER";}' \
-    #   '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
-    #   '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
-    #   '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-    #   '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
-    # Load new settings before rebuilding the index
-    # killall mds > /dev/null 2>&1
-    # Make sure indexing is enabled for the main volume
-    #sudo mdutil -i on / > /dev/null
-    # Rebuild the index from scratch
-    #sudo mdutil -E / > /dev/null
 
     # Time Machine Preferences
     # ---------------------------
