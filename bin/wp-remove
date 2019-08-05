@@ -28,12 +28,12 @@ then
 
     cd $DIR
 
-    echo "Dropping database '$1'..." 
+    echo "Dropping Database for site '$1'" 
     wp db drop --yes
 
     cd ~/lab/
 
-    echo "Removing site '$1'..."
+    echo "Removing '$1' site directory..."
     rm -rf $DIR
 
     echo "Site named '$1' has been removed successfully" 
